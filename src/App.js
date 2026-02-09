@@ -267,7 +267,7 @@ function ProgramsPage() {
     <div className="page programs-page">
       <section className="programs-hero">
         <div className="programs-hero-content">
-          <h1>ACADEMIC PROGRAMS</h1>
+          <h1>Academic Programs</h1>
           <p>Choose from our diverse range of engineering programs and skill-based certifications</p>
         </div>
       </section>
