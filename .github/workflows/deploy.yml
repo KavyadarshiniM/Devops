@@ -52,7 +52,7 @@ jobs:
             sudo docker pull kavyadarshinim/react-devops-app:latest
 
             sudo docker run -d \
-              -p 80:3000 \
+              -p 8080:3000 \
               --restart always \
               --name myapp \
               kavyadarshinim/react-devops-app:latest
