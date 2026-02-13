@@ -6,7 +6,7 @@ on:
       - main
 
 env:
-  IMAGE_NAME: kavyadarshnim/react-devops-app   # ✅ Your real Docker repo
+  IMAGE_NAME: kavyadarshnim/react-devops-app
   CLUSTER_NAME: chandru-eks
   REGION: ${{ secrets.AWS_REGION }}
   NAMESPACE: myapp
@@ -30,14 +30,10 @@ jobs:
           node-version: 18
 
       - name: Install dependencies
-        run: |
-          cd app
-          npm ci
+        run: npm ci
 
       - name: Run tests
-        run: |
-          cd app
-          echo "No tests configured yet"
+        run: echo "No tests configured yet"
 
 
 # =========================
@@ -63,7 +59,7 @@ jobs:
       - name: Build and push image
         uses: docker/build-push-action@v5
         with:
-          context: ./app
+          context: .
           push: true
           tags: |
             ${{ env.IMAGE_NAME }}:latest
